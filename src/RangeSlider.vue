@@ -10,7 +10,9 @@
         <span class="range-slider-rail"></span>
         <span class="range-slider-fill" :style="{ width: valuePercent + '%' }"></span>
         <span class="range-slider-clickarea" @click="clickSet"></span>
-        <span class="range-slider-knob" :style="{ left: valuePercent + '%' }"></span>
+        <span class="range-slider-knob" :style="{ left: valuePercent + '%' }">
+          <slot name="tooltip"></slot>
+        </span>
       </span>
     </drag-helper>
   </span>
