@@ -7,7 +7,9 @@
       :min="min"
       :max="max"
       :step="step"
-      :disabled="disabled"></range-slider>
+      :disabled="disabled">
+      <span class="tooltip" slot="tooltip">{{ value }}</span>
+    </range-slider>
 
     <div>
       name
@@ -64,7 +66,20 @@ export default {
 
 <style scoped>
 .slider {
+  margin-top: 30px;
   height: 50px;
   width: 200px;
+}
+
+.tooltip {
+  display: block;
+  position: relative;
+  top: -100%;
+  width: 100%;
+
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #9e9e9e;
 }
 </style>
